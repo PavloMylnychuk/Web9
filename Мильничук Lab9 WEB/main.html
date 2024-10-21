@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                "E A C D"
+                "B B C F"
+                "B B G G"
+                "H H I I";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(4, 150px);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            border: 2px solid black;
+        }
+
+        .item-a { grid-area: A; background-color: #f78fb3; }
+        .item-b { grid-area: B; background-color: #f78fb3; }
+        .item-c { grid-area: C; background-color: #f6b93b; }
+        .item-d { grid-area: D; background-color: #f6b93b; }
+        .item-e { grid-area: E; background-color: #ffffff; }
+        .item-f { grid-area: F; background-color: #ffffff; }
+        .item-g { grid-area: G; background-color: #78e08f; }
+        .item-h { grid-area: H; background-color: #78e08f; }
+        .item-i { grid-area: I; background-color: #ffffff; }
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item item-a">A</div>
+        <div class="grid-item item-b">B</div>
+        <div class="grid-item item-c">C</div>
+        <div class="grid-item item-d">D</div>
+        <div class="grid-item item-e">E</div>
+        <div class="grid-item item-f">F</div>
+        <div class="grid-item item-g">G</div>
+        <div class="grid-item item-h">H</div>
+        <div class="grid-item item-i">I</div>
+    </div>
+
+</body>
+</html>
